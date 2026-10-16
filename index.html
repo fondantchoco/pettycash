@@ -14,13 +14,13 @@
 
         /* الشريط الجانبي (Sidebar) */
         .sidebar { width: 260px; background: #2c3e50; color: #fff; display: flex; flex-direction: column; padding: 20px; position: fixed; height: 100vh; overflow-y: auto; }
-        .sidebar-brand { display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #4e6d8c; padding-bottom: 15px; margin-bottom: 20px; }
-        .sidebar-brand img { max-height: 45px; max-width: 45px; border-radius: 50%; object-fit: cover; background: #fff; }
-        .sidebar-brand h2 { font-size: 16px; font-weight: bold; }
-        .sidebar-brand p { font-size: 11px; color: #b8c7ce; }
+        .sidebar-brand { display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #4e6d8c; padding-bottom: 15px; margin-bottom: 20px; }
+        .sidebar-brand img { max-height: 55px; max-width: 55px; border-radius: 50%; object-fit: cover; background: #fff; border: 2px solid #1abc9c; }
+        .sidebar-brand h2 { font-size: 17px; font-weight: bold; }
+        .sidebar-brand p { font-size: 12px; color: #b8c7ce; }
 
         .sidebar-menu { display: flex; flex-direction: column; gap: 6px; flex: 1; }
-        .menu-btn { background: transparent; border: none; color: #b8c7ce; padding: 12px 15px; text-align: right; font-size: 14px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: 0.2s; display: flex; align-items: center; gap: 10px; }
+        .menu-btn { background: transparent; border: none; color: #b8c7ce; padding: 12px 15px; text-align: right; font-size: 15px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: 0.2s; display: flex; align-items: center; gap: 10px; }
         .menu-btn:hover, .menu-btn.active { background: #1abc9c; color: #fff; }
 
         .sidebar-footer { border-top: 1px solid #4e6d8c; padding-top: 15px; display: flex; flex-direction: column; gap: 8px; }
@@ -30,55 +30,65 @@
 
         /* شريط التنبيه للنسخة الاحتياطية */
         #backupReminderBanner {
-            background: #ff9800; color: #fff; padding: 10px 15px; border-radius: 6px; font-weight: bold; font-size: 13px;
+            background: #ff9800; color: #fff; padding: 10px 15px; border-radius: 6px; font-weight: bold; font-size: 14px;
             margin-bottom: 20px; display: none; justify-content: space-between; align-items: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
         /* كاردات الملخص المالي */
         .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 25px; }
         .s-card { background: #fff; border: 1px solid #e1e8ed; border-radius: 8px; padding: 18px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.03); }
-        .s-card h4 { font-size: 13px; color: #666; margin-bottom: 6px; }
-        .s-card .val { font-size: 22px; font-weight: bold; }
+        .s-card h4 { font-size: 14px; color: #555; margin-bottom: 6px; font-weight: bold; }
+        .s-card .val { font-size: 24px; font-weight: bold; }
 
         /* التبويبات */
         .tab-pane { display: none; background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #e1e8ed; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
         .tab-pane.active { display: block; }
-        h3 { font-size: 18px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f4f7f6; padding-bottom: 8px; }
+        h3 { font-size: 19px; color: #2c3e50; margin-bottom: 15px; border-bottom: 2px solid #f4f7f6; padding-bottom: 8px; font-weight: bold; }
 
-        /* النماذج والجداول وتصغير الأعمدة لتناسب الشاشة */
+        /* النماذج والجداول */
         .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; align-items: center; margin-bottom: 20px; background: #f8f9fa; padding: 12px; border-radius: 6px; border: 1px solid #ddd; }
         .form-group { display: flex; flex-direction: column; gap: 4px; position: relative; }
-        .form-group label { font-size: 11px; font-weight: bold; color: #444; }
-        .form-control, select.form-control { padding: 6px 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 15px !important; font-weight: bold; outline: none; background: #fff; text-align: right; }
+        .form-group label { font-size: 12px; font-weight: bold; color: #333; }
+        .form-control, select.form-control { padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px !important; font-weight: bold; outline: none; background: #fff; text-align: right; }
         .form-control:focus { border-color: #1abc9c; }
 
-        .btn { padding: 6px 12px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 12px; transition: 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 4px; height: 34px; margin-top: 15px; }
+        .btn { padding: 8px 14px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 13px; transition: 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 4px; height: 38px; margin-top: 15px; }
         .btn-primary { background: #1abc9c; color: white; }
         .btn-primary:hover { background: #16a085; }
-        .btn-warning { background: #f39c12; color: white; padding: 3px 6px; font-size: 11px; height: auto; margin-top: 0; }
-        .btn-danger { background: #e74c3c; color: white; padding: 3px 6px; font-size: 11px; height: auto; margin-top: 0; }
+        .btn-warning { background: #f39c12; color: white; padding: 4px 8px; font-size: 12px; height: auto; margin-top: 0; }
+        .btn-danger { background: #e74c3c; color: white; padding: 4px 8px; font-size: 12px; height: auto; margin-top: 0; }
         .btn-success { background: #2ecc71; color: white; }
         .btn-info { background: #3498db; color: white; }
 
-        .data-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12px; }
-        .data-table th, .data-table td { border: 1px solid #ddd; padding: 6px; text-align: center; }
-        .data-table th { background: #2c3e50; color: white; font-weight: bold; }
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        .data-table th, .data-table td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        .data-table th { background: #2c3e50; color: white; font-weight: bold; font-size: 15px; }
         .data-table tr:nth-child(even) { background: #f9f9f9; }
 
         .autocomplete-list { position: absolute; top: 100%; right: 0; left: 0; background: #e3f2fd; border: 1.5px solid #90caf9; max-height: 180px; overflow-y: auto; z-index: 1000; display: none; text-align: right; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .autocomplete-item { padding: 8px 10px; cursor: pointer; border-bottom: 1px solid #bbdefb; font-size: 15px !important; font-weight: bold; color: #0d47a1; }
+        .autocomplete-item { padding: 8px 10px; cursor: pointer; border-bottom: 1px solid #bbdefb; font-size: 16px !important; font-weight: bold; color: #0d47a1; }
         .autocomplete-item:hover { background: #bbdefb; }
 
+        .price-alert { background: #ffebee; color: #c62828; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; display: inline-block; margin-top: 3px; border: 1px solid #ffcdd2; }
+        .price-stable { color: #27ae60; font-size: 12px; font-weight: bold; display: inline-block; margin-top: 3px; }
+
         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-        .report-preview { background: #fff; padding: 25px; border: 1px solid #ccc; border-radius: 6px; margin-top: 15px; direction: rtl; text-align: right; }
+
+        /* منطقة معاينة التقرير وتكبير الكلام */
+        .report-preview { background: #fff; padding: 25px; border: 1px solid #bbb; border-radius: 6px; margin-top: 15px; direction: rtl; text-align: right; color: #000; }
+        .report-preview table { font-size: 15px !important; }
+        .report-preview th { font-size: 16px !important; padding: 10px 6px; }
+        .report-preview td { padding: 9px 6px; }
+        
+        .signatures-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 45px; text-align: center; font-size: 14px; font-weight: bold; border-top: 2px solid #333; padding-top: 18px; color: #111; }
     </style>
 </head>
 <body>
 
-<!-- الشريط الجانبي للتنقل -->
+<!-- الشريط الجانبي (Sidebar) -->
 <div class="sidebar">
     <div class="sidebar-brand">
-        <img src="https://i.postimg.cc/vZzRXMgJ/fondantchoco.jpg" alt="Logo">
+        <img src="https://i.postimg.cc/vZzRXMgJ/fondantchoco.jpg" alt="FONDANT CHOCO Logo">
         <div>
             <h2>FONDANT CHOCO</h2>
             <p>نظام العهدة والمشتريات</p>
@@ -126,10 +136,10 @@
         </div>
     </div>
 
-    <!-- 1. تبويب تسجيل فواتير المشتريات المرتبطة بالمورد -->
+    <!-- 1. تبويب تسجيل فواتير المشتريات -->
     <div id="dailyTab" class="tab-pane active">
-        <h3 id="formTitleHeader">تسجيل فاتورة مشتريات (مرتبطة بالمورد)</h3>
-        <div class="form-grid" style="grid-template-columns: 130px 1fr 120px 110px;">
+        <h3 id="formTitleHeader">تسجيل فاتورة مشتريات (مرتبطة بالمورد ومراقبة الأسعار)</h3>
+        <div class="form-grid" style="grid-template-columns: 140px 1fr 130px 120px;">
             <div class="form-group">
                 <label>التاريخ:</label>
                 <input type="date" id="txDate" class="form-control" onkeydown="handleEnter(event, 'txSupplierInput')">
@@ -146,17 +156,16 @@
             <button type="button" id="addInvoiceRowBtn" class="btn btn-success" onclick="addInvoiceItemRow()">➕ إضافة صنف</button>
         </div>
 
-        <!-- جدول بنود الأصناف للفاتورة الحالية -->
-        <h4 style="margin-top:15px; margin-bottom:5px; color:#2980b9; font-size:14px;">بنود وأصناف الفاتورة (مرتبطة بالمورد المختار):</h4>
+        <h4 style="margin-top:15px; margin-bottom:5px; color:#2980b9; font-size:15px; font-weight:bold;">بنود وأصناف الفاتورة (مرتبطة بالمورد المختار):</h4>
         <table class="data-table" style="margin-bottom: 15px;">
             <thead>
                 <tr>
-                    <th style="width: 35%;">الصنف</th>
+                    <th style="width: 32%;">الصنف</th>
                     <th style="width: 15%;">الشد / الوحدة</th>
-                    <th style="width: 15%;">الكمية</th>
+                    <th style="width: 13%;">الكمية</th>
                     <th style="width: 15%;">سعر الوحدة (د.ك)</th>
-                    <th style="width: 12%;">الإجمالي</th>
-                    <th style="width: 8%;">إجراء</th>
+                    <th style="width: 15%;">الإجمالي</th>
+                    <th style="width: 10%;">إجراء</th>
                 </tr>
             </thead>
             <tbody id="currentInvoiceItemsBody">
@@ -164,21 +173,21 @@
             </tbody>
         </table>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; background: #e8f8f5; padding: 10px 15px; border-radius: 6px; border: 1px solid #a3e4d7;">
-            <div style="font-size: 15px; font-weight: bold; color: #16a085;">
-                إجمالي مبلغ الفاتورة: <span id="currentInvoiceTotalPreview" style="color:#c0392b;">0.000 د.ك</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; background: #e8f8f5; padding: 12px 18px; border-radius: 6px; border: 1px solid #a3e4d7;">
+            <div style="font-size: 16px; font-weight: bold; color: #16a085;">
+                إجمالي مبلغ الفاتورة: <span id="currentInvoiceTotalPreview" style="color:#c0392b; font-size:18px;">0.000 د.ك</span>
             </div>
-            <button type="button" id="submitTxBtn" class="btn btn-primary" style="margin-top:0; padding: 8px 20px; font-size: 14px;" onclick="saveCompleteInvoice()">💾 حفظ الفاتورة الكاملة</button>
+            <button type="button" id="submitTxBtn" class="btn btn-primary" style="margin-top:0; padding: 8px 22px; font-size: 15px;" onclick="saveCompleteInvoice()">💾 حفظ الفاتورة الكاملة</button>
         </div>
 
-        <h4 style="margin-top:20px; margin-bottom:10px; font-size:15px;">سجل فواتير المشتريات المسجلة</h4>
+        <h4 style="margin-top:20px; margin-bottom:10px; font-size:16px; font-weight:bold;">سجل فواتير المشتريات المسجلة</h4>
         <table class="data-table">
             <thead>
                 <tr>
                     <th>#</th>
                     <th>التاريخ</th>
                     <th>الشركة / المورد</th>
-                    <th>الأصناف والكميات داخل الفاتورة</th>
+                    <th>الأصناف والأسعار ومراقبة التغير</th>
                     <th>الإجمالي</th>
                     <th>إجراء</th>
                 </tr>
@@ -190,7 +199,7 @@
     <!-- 2. تبويب المصروفات النثرية -->
     <div id="pettyExpTab" class="tab-pane">
         <h3>تسجيل المصروفات النثرية اليومية</h3>
-        <div class="form-grid" style="grid-template-columns: 130px 1fr 1fr 120px 100px;">
+        <div class="form-grid" style="grid-template-columns: 140px 1fr 1fr 130px 110px;">
             <div class="form-group">
                 <label>التاريخ:</label>
                 <input type="date" id="pExpDate" class="form-control" onkeydown="handleEnter(event, 'pExpCategoryInput')">
@@ -211,7 +220,7 @@
             <button type="button" id="submitPeBtn" class="btn btn-primary" onclick="addPettyExpense()">➕ صرف</button>
         </div>
 
-        <h4 style="margin-top:20px; margin-bottom:10px; font-size:15px;">سجل المصروفات النثرية</h4>
+        <h4 style="margin-top:20px; margin-bottom:10px; font-size:16px; font-weight:bold;">سجل المصروفات النثرية</h4>
         <table class="data-table">
             <thead>
                 <tr>
@@ -230,7 +239,7 @@
     <!-- 3. تبويب تمويل وزيادة العهدة -->
     <div id="fundsTab" class="tab-pane">
         <h3>إدارة تمويل وزيادة رصيد العهدة</h3>
-        <div class="form-grid" style="grid-template-columns: 130px 1fr 130px 1fr 100px;">
+        <div class="form-grid" style="grid-template-columns: 140px 1fr 140px 1fr 110px;">
             <div class="form-group">
                 <label>التاريخ:</label>
                 <input type="date" id="fundDate" class="form-control" onkeydown="handleEnter(event, 'fundSource')">
@@ -250,7 +259,7 @@
             <button type="button" id="submitFundBtn" class="btn btn-primary" onclick="addFundRecord()">➕ إضافة</button>
         </div>
 
-        <h4 style="margin-top:20px; margin-bottom:10px; font-size:15px;">سجل تمويلات العهدة</h4>
+        <h4 style="margin-top:20px; margin-bottom:10px; font-size:16px; font-weight:bold;">سجل تمويلات العهدة</h4>
         <table class="data-table">
             <thead>
                 <tr>
@@ -268,10 +277,10 @@
 
     <!-- 4. تبويب دليل الأصناف والشركات -->
     <div id="catalogTab" class="tab-pane">
-        <h3>دليل الأصناف والشركات الموردة (مرتبطة بالمورد)</h3>
+        <h3>دليل الأصناف والشركات الموردة</h3>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
             <div>
-                <h4 style="margin-bottom: 8px; color: #34495e; font-size:14px;">إضافة صنف جديد مرتبط بمورد</h4>
+                <h4 style="margin-bottom: 8px; color: #34495e; font-size:15px; font-weight:bold;">إضافة صنف جديد مرتبط بمورد</h4>
                 <div class="form-grid" style="grid-template-columns: 1fr;">
                     <div class="form-group"><label>اسم الصنف:</label><input type="text" id="catItem" class="form-control" placeholder="مثل: طماطم" onkeydown="handleEnter(event, 'catUnit')"></div>
                     <div class="form-group"><label>الشد / الوحدة:</label><input type="text" id="catUnit" class="form-control" placeholder="مثل: صندوق" onkeydown="handleEnter(event, 'catSupplier')"></div>
@@ -280,19 +289,19 @@
                 </div>
             </div>
             <div>
-                <h4 style="margin-bottom: 8px; color: #34495e; font-size:14px;">بنود المصروفات النثرية</h4>
+                <h4 style="margin-bottom: 8px; color: #34495e; font-size:15px; font-weight:bold;">بنود المصروفات النثرية</h4>
                 <div class="form-grid" style="grid-template-columns: 1fr;">
                     <div class="form-group"><label>بند المصروف:</label><input type="text" id="catExpenseCategory" class="form-control" placeholder="مثل: ضيافة" onkeydown="handleEnter(event, 'saveCatExpBtn')"></div>
                     <button type="button" id="saveCatExpBtn" class="btn btn-primary" onclick="addExpenseCategory()">حفظ البند</button>
                 </div>
                 <div style="margin-top: 10px;">
-                    <h5 style="font-size:13px;">البنود المسجلة:</h5>
-                    <ul id="expenseCatListDisplay" style="padding-right: 20px; margin-top: 5px; font-size: 14px;"></ul>
+                    <h5 style="font-size:14px; font-weight:bold;">البنود المسجلة:</h5>
+                    <ul id="expenseCatListDisplay" style="padding-right: 20px; margin-top: 5px; font-size: 15px;"></ul>
                 </div>
             </div>
         </div>
 
-        <h4 style="margin-top:20px; margin-bottom:10px; font-size:15px;">جدول الأصناف والشركات (قابل للتعديل المباشر)</h4>
+        <h4 style="margin-top:20px; margin-bottom:10px; font-size:16px; font-weight:bold;">جدول الأصناف والشركات (قابل للتعديل المباشر)</h4>
         <table class="data-table">
             <thead>
                 <tr>
@@ -307,10 +316,10 @@
         </table>
     </div>
 
-    <!-- 5. تبويب التقارير وكشوفات PDF -->
+    <!-- 5. تبويب التقارير وكشوفات PDF (مع تكبير الخط والشعار وتصغير حجم الملف) -->
     <div id="reportsTab" class="tab-pane">
         <h3>التقارير المالية وتصدير كشف العهدة والمشتريات</h3>
-        <div class="form-grid" style="grid-template-columns: 130px 130px 1fr 1fr 110px;">
+        <div class="form-grid" style="grid-template-columns: 140px 140px 1fr 1fr 120px;">
             <div class="form-group">
                 <label>من تاريخ:</label>
                 <input type="date" id="repFromDate" class="form-control" onchange="generateReport()">
@@ -322,7 +331,7 @@
             <div class="form-group">
                 <label>نوع التقرير:</label>
                 <select id="repType" class="form-control" onchange="toggleItemFilter()">
-                    <option value="custody_statement">كشف حساب العهدة الشامل</option>
+                    <option value="custody_statement">كشف حساب العهدة الشامل (أول وآخر المدة)</option>
                     <option value="purchases">تقرير المشتريات اليومية بالتفصيل</option>
                     <option value="item_quantity">تقرير كميات صنف معين خلال فترة</option>
                 </select>
@@ -336,28 +345,43 @@
         </div>
 
         <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-            <button class="btn btn-primary" onclick="exportPDFReport()">📄 تصدير ملف PDF فعلي</button>
+            <button class="btn btn-primary" onclick="exportPDFReport()">📄 تصدير ملف PDF (واضح ومضغوط)</button>
             <button class="btn btn-success" onclick="exportExcelReport()">📊 تصدير Excel</button>
         </div>
 
-        <!-- معاينة التقرير -->
+        <!-- معاينة التقرير وتكبير البيانات بشكل كامل -->
         <div class="report-preview" id="reportPreviewArea">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 15px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid #2c3e50; padding-bottom: 12px; margin-bottom: 18px;">
                 <div>
-                    <h3 style="font-size: 18px; font-weight: bold; color: #2c3e50; border:none; margin:0;">FONDANT CHOCO</h3>
-                    <p style="font-size: 11px; color: #666; margin-top:2px;">نظام إدارة العهدة والمشتريات والمصروفات النثرية</p>
+                    <h2 style="font-size: 22px; font-weight: bold; color: #2c3e50; border:none; margin:0;">FONDANT CHOCO</h2>
+                    <p style="font-size: 13px; color: #555; margin-top:3px; font-weight:bold;">نظام إدارة العهدة والمشتريات والمصروفات النثرية</p>
                 </div>
                 <div>
-                    <img src="https://i.postimg.cc/vZzRXMgJ/fondantchoco.jpg" alt="Logo" style="max-height: 45px; max-width: 110px; object-fit: contain;">
+                    <!-- تكبير شعار الشركة في التقرير والـ PDF -->
+                    <img src="https://i.postimg.cc/vZzRXMgJ/fondantchoco.jpg" alt="FONDANT CHOCO Logo" style="max-height: 70px; max-width: 140px; object-fit: contain; border-radius: 50%; border: 2px solid #1abc9c;">
                 </div>
             </div>
-            <div style="text-align: center; margin-bottom: 15px;">
-                <h4 style="font-size: 15px; font-weight: bold;" id="repTitleText">كشف حساب العهدة الشامل</h4>
-                <p style="font-size: 12px; color: #555;" id="repPeriodText">الفترة من -- إلى --</p>
+            <div style="text-align: center; margin-bottom: 18px;">
+                <h3 style="font-size: 18px; font-weight: bold; border:none; margin:0;" id="repTitleText">كشف حساب العهدة الشامل</h3>
+                <p style="font-size: 14px; color: #333; font-weight:bold; margin-top:4px;" id="repPeriodText">الفترة من -- إلى --</p>
             </div>
+            
             <div id="repTableContainer"></div>
-            <div style="display: flex; justify-content: flex-start; margin-top: 35px; font-size: 12px; font-weight: bold;">
-                <div>توقيع المدير المالي:<br><br><br>......................................</div>
+
+            <!-- التوقيعات الثلاثة مع تكبير الخط -->
+            <div class="signatures-grid">
+                <div>
+                    مدير المبيعات والمشتريات<br><br><br>
+                    ......................................
+                </div>
+                <div>
+                    المدير المالي<br><br><br>
+                    ......................................
+                </div>
+                <div>
+                    اعتماد الإدارة<br><br><br>
+                    ......................................
+                </div>
             </div>
         </div>
     </div>
@@ -399,7 +423,7 @@
     document.getElementById('repFromDate').value = new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString().split('T')[0];
     document.getElementById('repToDate').value = todayStr;
 
-    // التنقل بزر Enter
+    // التنقل بزر Enter بين الحقول
     function handleEnter(event, nextFieldId) {
         if(event.key === 'Enter') {
             event.preventDefault();
@@ -408,7 +432,6 @@
         }
     }
 
-    // تنبيه النسخة الاحتياطية كل 30 دقيقة
     function checkBackupReminder() {
         const lastBackup = localStorage.getItem('fc_petty_last_backup') || 0;
         const dismissedTime = localStorage.getItem('fc_petty_backup_dismissed') || 0;
@@ -467,7 +490,6 @@
         a.click();
         localStorage.setItem('fc_petty_last_backup', Date.now());
         document.getElementById('backupReminderBanner').style.display = 'none';
-        alert('تم أخذ النسخة الاحتياطية للبيانات بنجاح!');
     }
 
     function importJsonBackup(event) {
@@ -485,14 +507,13 @@
                     funds = data.funds || [];
                     saveData();
                     renderAllTables();
-                    alert('تمت استعادة البيانات بنجاح!');
                 }
-            } catch(err) { alert('ملف النسخة الاحتياطية غير صالح.'); }
+            } catch(err) { console.error('ملف غير صالح'); }
         };
         reader.readAsText(file);
     }
 
-    // --- إدارة فواتير المشتريات المرتبطة بالمورد ---
+    // --- إدارة فواتير المشتريات ---
     const txSupplierInput = document.getElementById('txSupplierInput');
     const supplierList = document.getElementById('supplierList');
 
@@ -517,21 +538,17 @@
         txSupplierInput.value = supplierName;
         supplierList.style.display = 'none';
 
-        // إذا تغير المورد، يتم مسح الأصناف القديمة تلقائياً لتتم إضافة أصناف المورد الجديد
         if(lastSelectedSupplier !== supplierName) {
-            document.getElementById('currentInvoiceItemsBody').innerHTML = '<tr><td colspan="6" style="color:#777;">تم تغيير المورد. اضغط "إضافة صنف" لإضافة أصناف المورد الجديد.</td></tr>';
+            document.getElementById('currentInvoiceItemsBody').innerHTML = '<tr><td colspan="6" style="color:#777;">تم اختيار المورد. اضغط "إضافة صنف" لإضافة أصناف المورد الجديد.</td></tr>';
             calcInvoiceTotal();
             lastSelectedSupplier = supplierName;
         }
-
-        // الانتقال التلقائي لمربع رقم الفاتورة
         document.getElementById('txInvoiceNo').focus();
     }
 
     function addInvoiceItemRow(itemData = null) {
         const supplier = txSupplierInput.value.trim();
         if(!supplier) {
-            alert('يرجى تحديد اسم الشركة / المورد أولاً لتتمكن من إضافة الأصناف الخاصة به.');
             txSupplierInput.focus();
             return;
         }
@@ -609,16 +626,13 @@
         const supplier = txSupplierInput.value.trim();
         const invoiceNo = document.getElementById('txInvoiceNo').value.trim();
 
-        if(!supplier) { alert('يرجى تحديد اسم الشركة / المورد للفاتورة.'); return; }
+        if(!supplier) return;
 
         let items = [];
         let totalInvoiceAmount = 0;
 
         let rows = document.querySelectorAll('#currentInvoiceItemsBody tr');
-        if(rows.length === 0 || rows[0].querySelector('td[colspan]')) {
-            alert('يرجى إضافة صنف واحد على الأقل للفاتورة.');
-            return;
-        }
+        if(rows.length === 0 || rows[0].querySelector('td[colspan]')) return;
 
         let isValid = true;
         rows.forEach(tr => {
@@ -630,7 +644,25 @@
 
             if(!item || qty <= 0 || unitCost <= 0) { isValid = false; return; }
 
-            items.push({ item, unit: unit || 'وحدة', quantity: qty, unitCost: unitCost.toFixed(3), rowTotal: rowTotal.toFixed(3) });
+            let priceStatusHtml = `<span class="price-stable">سعر مستقر</span>`;
+            let prevTxItem = null;
+            for(let t of transactions) {
+                let found = t.items.find(it => it.item.toLowerCase() === item.toLowerCase());
+                if(found) { prevTxItem = found; break; }
+            }
+
+            if(prevTxItem) {
+                let prevCost = parseFloat(prevTxItem.unitCost);
+                if(unitCost > prevCost) {
+                    let diff = (unitCost - prevCost).toFixed(3);
+                    priceStatusHtml = `<span class="price-alert">⚠️ ارتفاع السعر عن السابق (${prevCost.toFixed(3)}) بمقدار +${diff} د.ك</span>`;
+                } else if(unitCost < prevCost) {
+                    let diff = (prevCost - unitCost).toFixed(3);
+                    priceStatusHtml = `<span style="color:#27ae60; font-size:12px; font-weight:bold;">📉 انخفاض السعر عن السابق (${prevCost.toFixed(3)}) بمقدار -${diff} د.ك</span>`;
+                }
+            }
+
+            items.push({ item, unit: unit || 'وحدة', quantity: qty, unitCost: unitCost.toFixed(3), rowTotal: rowTotal.toFixed(3), priceStatus: priceStatusHtml });
             totalInvoiceAmount += rowTotal;
 
             if(!catalog.some(c => c.item.toLowerCase() === item.toLowerCase() && c.supplier.toLowerCase() === supplier.toLowerCase())) {
@@ -638,7 +670,7 @@
             }
         });
 
-        if(!isValid) { alert('يرجى استكمال جميع بيانات الأصناف (اسم الصنف، الكمية، وسعر الوحدة).'); return; }
+        if(!isValid) return;
 
         if(editInvoiceId !== null) {
             const index = transactions.findIndex(t => t.id === editInvoiceId);
@@ -649,7 +681,7 @@
                 };
             }
             editInvoiceId = null;
-            document.getElementById('formTitleHeader').innerText = "تسجيل فاتورة مشتريات (مرتبطة بالمورد)";
+            document.getElementById('formTitleHeader').innerText = "تسجيل فاتورة مشتريات (مرتبطة بالمورد والمراقبة)";
             document.getElementById('submitTxBtn').innerText = "💾 حفظ الفاتورة الكاملة";
         } else {
             transactions.unshift({
@@ -662,13 +694,11 @@
         renderTransactionsTable();
         renderCatalogTable();
 
-        // تفريغ خانات المورد ورقم الفاتورة والجدول بالكامل بعد الحفظ
         txSupplierInput.value = '';
         document.getElementById('txInvoiceNo').value = '';
         lastSelectedSupplier = "";
         document.getElementById('currentInvoiceItemsBody').innerHTML = '<tr><td colspan="6" style="color:#777;">اختر المورد أولاً ثم اضغط "إضافة صنف".</td></tr>';
         document.getElementById('currentInvoiceTotalPreview').innerText = '0.000 د.ك';
-        alert('تم حفظ الفاتورة الكاملة بنجاح وتفريغ خانات المورد والفاتورة للاستئناف!');
     }
 
     function editInvoice(id) {
@@ -694,14 +724,14 @@
         tbody.innerHTML = '';
         if(!transactions.length) { tbody.innerHTML = '<tr><td colspan="6" style="color:#777;">لا توجد فواتير مشتريات مسجلة.</td></tr>'; return; }
         transactions.forEach((t, i) => {
-            const itemsSummary = t.items.map(it => `${it.item} (${it.quantity} ${it.unit} @ ${it.unitCost})`).join('، ');
+            const itemsSummary = t.items.map(it => `<b>${it.item}</b> (${it.quantity} ${it.unit} @ ${it.unitCost} د.ك) <br>${it.priceStatus}`).join('<hr style="margin:4px 0; border:0; border-top:1px dashed #ddd;">');
             const tr = tbody.insertRow();
             tr.innerHTML = `
                 <td>${i + 1}</td>
                 <td>${t.date}</td>
                 <td><b>${t.supplier}</b><br><small style="color:#666;">رقم الفاتورة: ${t.invoiceNo}</small></td>
-                <td style="text-align:right; padding-right:10px; font-size:11px;">${itemsSummary}</td>
-                <td style="color:#c0392b; font-weight:bold; font-size:14px;">${t.totalInvoiceAmount} د.ك</td>
+                <td style="text-align:right; padding-right:10px; font-size:12px;">${itemsSummary}</td>
+                <td style="color:#c0392b; font-weight:bold; font-size:15px;">${t.totalInvoiceAmount} د.ك</td>
                 <td>
                     <button class="btn btn-warning" onclick="editInvoice(${t.id})">تعديل</button>
                     <button class="btn btn-danger" onclick="deleteInvoice(${t.id})">حذف</button>
@@ -746,7 +776,7 @@
         const description = document.getElementById('pExpDesc').value.trim();
         const amount = parseFloat(document.getElementById('pExpAmount').value) || 0;
 
-        if(!category || amount <= 0) { alert('يرجى تحديد بند المصروف ومبلغ صحيح.'); return; }
+        if(!category || amount <= 0) return;
         if(!expenseCategories.includes(category)) { expenseCategories.push(category); renderExpenseCategoriesList(); }
 
         if(editPeId !== null) {
@@ -812,7 +842,7 @@
         const amount = parseFloat(document.getElementById('fundAmount').value) || 0;
         const notes = document.getElementById('fundNotes').value.trim();
 
-        if(!source || amount <= 0) { alert('يرجى إدخال مصدر التمويل والمبلغ.'); return; }
+        if(!source || amount <= 0) return;
 
         if(editFundId !== null) {
             const idx = funds.findIndex(f => f.id === editFundId);
@@ -874,7 +904,7 @@
         const item = document.getElementById('catItem').value.trim();
         const unit = document.getElementById('catUnit').value.trim();
         const supplier = document.getElementById('catSupplier').value.trim();
-        if(!item || !supplier) { alert('يرجى إدخال اسم الصنف واسم المورد.'); return; }
+        if(!item || !supplier) return;
         catalog.push({ id: Date.now(), item, unit: unit || 'صندوق', supplier });
         saveData();
         renderCatalogTable();
@@ -934,7 +964,7 @@
         renderCatalogTable();
     }
 
-    // --- التقارير ---
+    // --- التقارير المالية ---
     function toggleItemFilter() {
         const type = document.getElementById('repType').value;
         document.getElementById('itemFilterGroup').style.display = type === 'item_quantity' ? 'flex' : 'none';
@@ -978,39 +1008,84 @@
         document.getElementById('repPeriodText').innerText = `الفترة من (${fromDate || 'البداية'}) إلى (${toDate || 'اليوم'})`;
 
         if(type === 'custody_statement') {
-            document.getElementById('repTitleText').innerText = "كشف حساب العهدة الشامل";
-            let combined = [];
+            document.getElementById('repTitleText').innerText = "كشف حساب العهدة الشامل (أول المدة وآخر المدة)";
+            
+            let initialBalance = 0;
+            if(fromDate) {
+                funds.forEach(f => { if(f.date < fromDate) initialBalance += parseFloat(f.amount) || 0; });
+                transactions.forEach(t => { if(t.date < fromDate) initialBalance -= parseFloat(t.totalInvoiceAmount) || 0; });
+                pettyExpenses.forEach(pe => { if(pe.date < fromDate) initialBalance -= parseFloat(pe.amount) || 0; });
+            }
+
+            let periodRows = [];
             funds.forEach(f => {
                 if((!fromDate || f.date >= fromDate) && (!toDate || f.date <= toDate)) {
-                    combined.push({ date: f.date, type: 'تمويل عهدة', supplier: f.source, desc: f.notes, inAmt: parseFloat(f.amount), outAmt: 0 });
+                    periodRows.push({ date: f.date, type: 'تمويل عهدة', supplier: f.source, desc: f.notes, inAmt: parseFloat(f.amount), outAmt: 0 });
                 }
             });
             
             transactions.forEach(t => { 
                 if((!fromDate || t.date >= fromDate) && (!toDate || t.date <= toDate)) {
                     let itemsStr = t.items.map(it => `${it.item} (${it.quantity} ${it.unit})`).join(', ');
-                    combined.push({ date: t.date, type: 'فاتورة مشتريات', supplier: t.supplier, desc: itemsStr, inAmt: 0, outAmt: parseFloat(t.totalInvoiceAmount) }); 
+                    periodRows.push({ date: t.date, type: 'فاتورة مشتريات', supplier: t.supplier, desc: itemsStr, inAmt: 0, outAmt: parseFloat(t.totalInvoiceAmount) }); 
                 } 
             });
 
             pettyExpenses.forEach(pe => {
                 if((!fromDate || pe.date >= fromDate) && (!toDate || pe.date <= toDate)) {
-                    combined.push({ date: pe.date, type: 'مصروف نثري', supplier: pe.category, desc: pe.description, inAmt: 0, outAmt: parseFloat(pe.amount) });
+                    periodRows.push({ date: pe.date, type: 'مصروف نثري', supplier: pe.category, desc: pe.description, inAmt: 0, outAmt: parseFloat(pe.amount) });
                 }
             });
             
-            combined.sort((a, b) => new Date(a.date) - new Date(b.date));
+            periodRows.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-            let html = `<table class="data-table"><thead><tr><th>التاريخ</th><th>النوع</th><th>المورد / الجهة</th><th>البيان والتفاصيل</th><th>إيداع (د.ك)</th><th>صرف (د.ك)</th></tr></thead><tbody>`;
-            let totalIn = 0, totalOut = 0;
-            if(!combined.length) { html += `<tr><td colspan="6">لا توجد حركات مسجلة خلال هذه الفترة.</td></tr>`; }
-            else {
-                combined.forEach(row => {
-                    totalIn += row.inAmt; totalOut += row.outAmt;
-                    html += `<tr><td>${row.date}</td><td><b>${row.type}</b></td><td><b>${row.supplier}</b></td><td>${row.desc}</td><td style="color:#27ae60;">${row.inAmt ? row.inAmt.toFixed(3) : '-'}</td><td style="color:#c0392b;">${row.outAmt ? row.outAmt.toFixed(3) : '-'}</td></tr>`;
+            let html = `<table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="font-size:16px;">التاريخ</th>
+                        <th style="font-size:16px;">النوع</th>
+                        <th style="font-size:16px;">المورد / الجهة</th>
+                        <th style="font-size:16px;">البيان والتفاصيل</th>
+                        <th style="font-size:16px;">إيداع / تمويل (د.ك)</th>
+                        <th style="font-size:16px;">صرف / مشتريات (د.ك)</th>
+                    </tr>
+                </thead>
+                <tbody>`;
+
+            html += `<tr style="background:#eef7fa; font-weight:bold; font-size:15px;">
+                <td colspan="4" style="text-align:right; padding-right:15px; color:#2980b9;">رصيد أول المدة (السابق للفترة)</td>
+                <td colspan="2" style="color:#2980b9; font-size:16px;">${initialBalance.toFixed(3)} د.ك</td>
+            </tr>`;
+
+            let periodIn = 0, periodOut = 0;
+            if(!periodRows.length) {
+                html += `<tr><td colspan="6" style="color:#777; font-size:15px;">لا توجد حركات مسجلة خلال هذه الفترة.</td></tr>`;
+            } else {
+                periodRows.forEach(row => {
+                    periodIn += row.inAmt; 
+                    periodOut += row.outAmt;
+                    html += `<tr>
+                        <td style="font-size:15px;">${row.date}</td>
+                        <td style="font-size:15px;"><b>${row.type}</b></td>
+                        <td style="font-size:15px;"><b>${row.supplier}</b></td>
+                        <td style="font-size:15px;">${row.desc}</td>
+                        <td style="color:#27ae60; font-size:15px; font-weight:bold;">${row.inAmt ? row.inAmt.toFixed(3) : '-'}</td>
+                        <td style="color:#c0392b; font-size:15px; font-weight:bold;">${row.outAmt ? row.outAmt.toFixed(3) : '-'}</td>
+                    </tr>`;
                 });
             }
-            html += `</tbody></table><div style="margin-top:15px; font-weight:bold; display:flex; justify-content:space-around; font-size:13px;"><span>إجمالي التمويل: ${totalIn.toFixed(3)} د.ك</span><span>إجمالي المنصرف: ${totalOut.toFixed(3)} د.ك</span><span style="color:#2980b9;">الصافي المتبقي: ${(totalIn - totalOut).toFixed(3)} د.ك</span></div>`;
+
+            let finalBalance = initialBalance + periodIn - periodOut;
+
+            html += `</tbody></table>`;
+
+            html += `<div style="margin-top:22px; background:#f8f9fa; padding:16px; border-radius:6px; border:1px solid #ccc; font-weight:bold; display:grid; grid-template-columns: repeat(4, 1fr); gap:10px; text-align:center; font-size:14px; color:#000;">
+                <div style="color:#2980b9;">رصيد أول المدة:<br><span style="font-size:18px;">${initialBalance.toFixed(3)} د.ك</span></div>
+                <div style="color:#27ae60;">إجمالي تمويل الفترة:<br><span style="font-size:18px;">+ ${periodIn.toFixed(3)} د.ك</span></div>
+                <div style="color:#c0392b;">إجمالي مصروفات الفترة:<br><span style="font-size:18px;">- ${periodOut.toFixed(3)} د.ك</span></div>
+                <div style="background:#eaf2f8; padding:6px; border-radius:4px; color:${finalBalance < 0 ? '#c0392b' : '#16a085'};">رصيد آخر المدة (الرصيد الحالي):<br><span style="font-size:19px; font-weight:bold;">${finalBalance.toFixed(3)} د.ك</span></div>
+            </div>`;
+
             container.innerHTML = html;
 
         } else if(type === 'purchases') {
@@ -1018,24 +1093,24 @@
             let filtered = transactions.filter(t => (!fromDate || t.date >= fromDate) && (!toDate || t.date <= toDate));
             filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-            let html = `<table class="data-table"><thead><tr><th>التاريخ</th><th>اسم الشركة / المورد</th><th>بنود الفاتورة والأصناف</th><th>الإجمالي (د.ك)</th></tr></thead><tbody>`;
+            let html = `<table class="data-table"><thead><tr><th style="font-size:16px;">التاريخ</th><th style="font-size:16px;">اسم الشركة / المورد</th><th style="font-size:16px;">بنود الفاتورة والأصناف</th><th style="font-size:16px;">الإجمالي (د.ك)</th></tr></thead><tbody>`;
             let sum = 0;
-            if(!filtered.length) { html += `<tr><td colspan="4">لا توجد مشتريات مسجلة خلال هذه الفترة.</td></tr>`; }
+            if(!filtered.length) { html += `<tr><td colspan="4" style="font-size:15px;">لا توجد مشتريات مسجلة خلال هذه الفترة.</td></tr>`; }
             else {
                 filtered.forEach(t => {
                     sum += parseFloat(t.totalInvoiceAmount);
                     let itemsStr = t.items.map(it => `${it.item} (${it.quantity} ${it.unit} @ ${it.unitCost})`).join('، ');
-                    html += `<tr><td>${t.date}</td><td><b>${t.supplier}</b></td><td style="text-align:right; padding-right:10px;">${itemsStr}</td><td style="color:#c0392b; font-weight:bold;">${t.totalInvoiceAmount} د.ك</td></tr>`;
+                    html += `<tr><td style="font-size:15px;">${t.date}</td><td style="font-size:15px;"><b>${t.supplier}</b></td><td style="text-align:right; padding-right:10px; font-size:15px;">${itemsStr}</td><td style="color:#c0392b; font-weight:bold; font-size:16px;">${t.totalInvoiceAmount} د.ك</td></tr>`;
                 });
             }
-            html += `</tbody></table><div style="margin-top:15px; font-weight:bold; text-align:left;">إجمالي الفواتير: ${sum.toFixed(3)} د.ك</div>`;
+            html += `</tbody></table><div style="margin-top:15px; font-weight:bold; text-align:left; font-size:16px; background:#f8f9fa; padding:12px; border:1px solid #ccc;">إجمالي المشتريات للفترة: ${sum.toFixed(3)} د.ك</div>`;
             container.innerHTML = html;
 
         } else if(type === 'item_quantity') {
             document.getElementById('repTitleText').innerText = selectedReportItem ? `تقرير كميات الشراء لصنف: [ ${selectedReportItem} ]` : `تقرير كميات الشراء لصنف محدد`;
             let matchingItemsCount = 0;
             let totalQty = 0, totalCost = 0;
-            let html = `<table class="data-table"><thead><tr><th>التاريخ</th><th>اسم الصنف</th><th>المورد</th><th>الكمية</th><th>سعر الوحدة</th><th>الإجمالي (د.ك)</th></tr></thead><tbody>`;
+            let html = `<table class="data-table"><thead><tr><th style="font-size:16px;">التاريخ</th><th style="font-size:16px;">اسم الصنف</th><th style="font-size:16px;">المورد</th><th style="font-size:16px;">الكمية</th><th style="font-size:16px;">سعر الوحدة</th><th style="font-size:16px;">الإجمالي (د.ك)</th></tr></thead><tbody>`;
             
             transactions.forEach(t => {
                 if((!fromDate || t.date >= fromDate) && (!toDate || t.date <= toDate)) {
@@ -1044,37 +1119,46 @@
                             matchingItemsCount++;
                             totalQty += parseFloat(it.quantity);
                             totalCost += parseFloat(it.rowTotal);
-                            html += `<tr><td>${t.date}</td><td><b>${it.item}</b></td><td>${t.supplier}</td><td>${it.quantity} (${it.unit})</td><td>${it.unitCost} د.ك</td><td style="font-weight:bold;">${it.rowTotal} د.ك</td></tr>`;
+                            html += `<tr><td style="font-size:15px;">${t.date}</td><td style="font-size:15px;"><b>${it.item}</b></td><td style="font-size:15px;">${t.supplier}</td><td style="font-size:15px;">${it.quantity} (${it.unit})</td><td style="font-size:15px;">${it.unitCost} د.ك</td><td style="font-weight:bold; font-size:16px;">${it.rowTotal} د.ك</td></tr>`;
                         }
                     });
                 }
             });
 
-            if(matchingItemsCount === 0) { html += `<tr><td colspan="6">الرجاء اختيار صنف من قائمة البحث أعلاه لترشيح البيانات.</td></tr>`; }
-            html += `</tbody></table><div style="margin-top:15px; font-weight:bold; display:flex; justify-content:space-around; font-size:13px;"><span>إجمالي الكميات: ${totalQty}</span><span style="color:#c0392b;">إجمالي التكلفة: ${totalCost.toFixed(3)} د.ك</span></div>`;
+            if(matchingItemsCount === 0) { html += `<tr><td colspan="6" style="font-size:15px;">الرجاء اختيار صنف من قائمة البحث أعلاه لترشيح البيانات.</td></tr>`; }
+            html += `</tbody></table><div style="margin-top:15px; font-weight:bold; display:flex; justify-content:space-around; font-size:15px; background:#f8f9fa; padding:12px; border:1px solid #ccc;"><span>إجمالي الكميات المشترات: ${totalQty}</span><span style="color:#c0392b;">إجمالي التكلفة: ${totalCost.toFixed(3)} د.ك</span></div>`;
             container.innerHTML = html;
         }
     }
 
+    // --- تصدير الـ PDF عالي النقاء والضغط الممتاز تقليلاً للحجم ---
     function exportPDFReport() {
         const element = document.getElementById('reportPreviewArea');
-        html2canvas(element, { scale: 2 }).then(canvas => {
-            const imgData = canvas.toDataURL('image/png');
+        
+        // خيارات html2canvas للتحكم بالدقة
+        html2canvas(element, { 
+            scale: 1.5,
+            useCORS: true,
+            logging: false
+        }).then(canvas => {
+            // استخدام صيغة JPEG مع نسبة ضغط 75% لتصغير الحجم بشكل مذهل (أقل من 1.5 ميجابايت)
+            const imgData = canvas.toDataURL('image/jpeg', 0.75);
             const { jsPDF } = window.jspdf;
-            const pdf = new jsPDF('p', 'mm', 'a4');
+            const pdf = new jsPDF('p', 'mm', 'a4', true);
+            
             const imgWidth = 190;
             const pageHeight = 295;
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
             let heightLeft = imgHeight;
             let position = 10;
 
-            pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+            pdf.addImage(imgData, 'JPEG', 10, position, imgWidth, imgHeight, undefined, 'FAST');
             heightLeft -= pageHeight;
 
             while (heightLeft >= 0) {
                 position = heightLeft - imgHeight;
                 pdf.addPage();
-                pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+                pdf.addImage(imgData, 'JPEG', 10, position, imgWidth, imgHeight, undefined, 'FAST');
                 heightLeft -= pageHeight;
             }
             pdf.save(`FondantChoco_Report_${todayStr}.pdf`);
@@ -1095,7 +1179,6 @@
         generateReport();
     }
 
-    // التشغيل التلقائي فور تحميل الصفحة لإظهار السجلات السابقة فوراً
     window.onload = function() {
         renderAllTables();
     };
